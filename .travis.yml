@@ -17,12 +17,13 @@ install:
   - export PATH="$HOME/miniconda/bin:$PATH"
   - hash -r
   - conda config --set always_yes yes --set changeps1 no
+  - conda config --add_channels conda-forge
   - conda update -q conda
   # Useful for debugging any issues with conda
   - conda info -a
 
   # Replace dep1 dep2 ... with your dependencies
-  - conda env create -f environment.yml
+  - conda create -q -n travis-test-bob python=$TRAVIS_PYTHON_VERSION gitpython bob.extension sphinx_rtd_theme
   - source activate travis-test-bob
   - python bootstrap-buildout.py
   - bin/buildout
