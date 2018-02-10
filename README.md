@@ -1,5 +1,7 @@
 # travis-test-bob
 
+[![Build Status](https://travis-ci.org/acostapazo/travis-test-bob.svg?branch=master)](https://travis-ci.org/acostapazo/travis-test-bob)
+
 This package is created only for learning proposes. 
 
 Following the instruction below, we have added ci into this project using travis:
@@ -8,6 +10,13 @@ Following the instruction below, we have added ci into this project using travis
 - [Travis CI: Getting started](https://docs.travis-ci.com/user/getting-started/)
 - [Using conda with Travis CI](https://conda.io/docs/user-guide/tasks/use-conda-with-travis-ci.html)
 
+
+##### Environment
+
+~~~
+ $ conda env create -f environment.yml
+ $ source activate travis-test-bob
+~~~
 
 ##### Install
 
