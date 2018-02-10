@@ -29,4 +29,5 @@ install:
   - bin/buildout
 
 script:
-  # Your test script goes here
+  - bin/nosetests -v
+  - bin/script_example.py
