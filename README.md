@@ -11,6 +11,13 @@ Following the instruction below, we have added ci into this project using travis
 - [Using conda with Travis CI](https://conda.io/docs/user-guide/tasks/use-conda-with-travis-ci.html)
 
 
+##### Environment
+
+~~~
+ $ conda env create -f environment.yml
+ $ source activate travis-test-bob
+~~~
+
 ##### Install
 
 ~~~
