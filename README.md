@@ -1,5 +1,7 @@
 # travis-test-bob
 
+[![Build Status](https://travis-ci.org/acostapazo/travis-test-bob.svg?branch=master)](https://travis-ci.org/acostapazo/travis-test-bob)
+
 This package is created only for learning proposes. 
 
 Following the instruction below, we have added ci into this project using travis:
