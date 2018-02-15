@@ -30,3 +30,13 @@ install:
 script:
   - bin/nosetests -v
   - bin/script_example.py
+  - bin/sphinx-build -b html doc doc/html
+
+# Deploy using travis builtin GitHub Pages support
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: $TRAVIS_BUILD_DIR/doc/html
+  github_token: $GITHUB_API_KEY
+  on:
+    branch: master
