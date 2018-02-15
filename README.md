@@ -1,6 +1,7 @@
 # travis-test-bob
 
 [![Build Status](https://travis-ci.org/acostapazo/travis-test-bob.svg?branch=master)](https://travis-ci.org/acostapazo/travis-test-bob)
+[![Doc](http://img.shields.io/badge/docs-latest-orange.svg)](https://acostapazo.github.io/travis-test-bob/)
 
 This package is created only for learning proposes. 
 
