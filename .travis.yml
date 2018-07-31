@@ -22,11 +22,23 @@ install:
   - conda info -a
 
   # Replace dep1 dep2 ... with your dependencies
-  - conda create -q -n travis-test-bob python=$TRAVIS_PYTHON_VERSION gitpython bob.extension sphinx_rtd_theme
+  - conda create -q -n travis-test-bob python=$TRAVIS_PYTHON_VERSION
   - source activate travis-test-bob
+  - pip install gitpython bob.extension sphinx_rtd_theme
   - python bootstrap-buildout.py
   - bin/buildout
 
 script:
   - bin/nosetests -v
   - bin/script_example.py
+  - bin/sphinx-build -b html doc doc/html
+
+# Deploy using travis builtin GitHub Pages support
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: doc/html
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master
+
