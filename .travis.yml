@@ -22,8 +22,9 @@ install:
   - conda info -a
 
   # Replace dep1 dep2 ... with your dependencies
-  - conda create -q -n travis-test-bob python=$TRAVIS_PYTHON_VERSION gitpython bob.extension sphinx_rtd_theme
+  - conda create -q -n travis-test-bob python=$TRAVIS_PYTHON_VERSION
   - source activate travis-test-bob
+  - pip install gitpython bob.extension sphinx_rtd_theme
   - python bootstrap-buildout.py
   - bin/buildout
 
