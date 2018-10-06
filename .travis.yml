@@ -2,7 +2,6 @@ language: python
 
 os:
   - linux
-  #- osx Not supported yet
 python:
   - "2.7"
   - "3.5"
