@@ -7,7 +7,7 @@ bob.travis
 
 .. todolist::
 
-Dummy bob package
+Dummy bob package (travis-test-bob).
 
 Documentation
 -------------
